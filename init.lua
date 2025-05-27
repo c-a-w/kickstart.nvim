@@ -92,6 +92,7 @@ vim.o.confirm = true
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 vim.keymap.set('n', ';', ':')
 vim.keymap.set('i', 'kj', '<Esc>')
+vim.keymap.set('n', '<leader>t', ':NvimTreeFindFileToggle<CR>')
 
 -- Diagnostic keymaps
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
@@ -161,6 +162,10 @@ rtp:prepend(lazypath)
 -- NOTE: Here is where you install your plugins.
 require('lazy').setup({
   'NMAC427/guess-indent.nvim', -- Detect tabstop and shiftwidth automatically
+  'tpope/vim-rails',
+  'f-person/auto-dark-mode.nvim',
+  'tpope/vim-surround',
+  'tpope/vim-repeat',
   {
     'nvim-tree/nvim-tree.lua',
     version = '*',
